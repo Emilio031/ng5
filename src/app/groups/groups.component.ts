@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from '../ApiService/api.service';
-import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+import { debug } from 'util';
 
 
 @Component({
@@ -10,11 +11,14 @@ import { trigger, style, transition, animate, keyframes, query, stagger } from '
 })
 export class GroupsComponent implements OnInit {
 
-  constructor(private apiService: ApiService) { }
+  constructor(private router: Router, private apiService: ApiService) { }
   groups = [];
   ngOnInit() {
+    this.getGroup();
   }
   getGroup() {
+    console.log("getGroups");
+
     this.apiService.get('/Groups/GetAllGroups').subscribe((data: any) => {
 
       for (const x of data) {
@@ -26,5 +30,22 @@ export class GroupsComponent implements OnInit {
       }
     });
   }
+  addGroup(name, description){
+    let body = {
+      Name: name,
+      Description: description
+    }
+    console.log(name, description)
+    this.apiService.post('/Groups/AddGroups', body).subscribe((data: any) => { 
+      this.getGroup();
+
+  })
+}
+  deleteGroup(id){
+    this.apiService.get('/Groups/DeleteGroup/' + id).subscribe((data: any) => { 
+    this.getGroup();
+    })
+  }
+  
 
 }

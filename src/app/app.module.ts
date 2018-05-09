@@ -26,8 +26,7 @@ import { ApiService } from './ApiService/api.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule,
-    BrowserAnimationsModule
+    HttpModule
   ],
   providers: [
       DataService,

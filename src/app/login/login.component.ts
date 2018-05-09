@@ -9,7 +9,7 @@ import { ApiService } from '../ApiService/api.service';
 export class LoginComponent implements OnInit {
   email: any = {};
   password: any = {};
-  token: string;
+  // token: string;
   constructor(private router: Router, private apiService: ApiService) {}
 
   ngOnInit() {
@@ -27,9 +27,9 @@ export class LoginComponent implements OnInit {
     this.apiService.post('/Identities/Login', body).subscribe((data: any) => {
       if (data.Success) {
         this.router.navigate(['groups']);
-        this.token = data.Result.Token;
+        this.apiService.token = data.Result.Token;
         this.apiService.setToken(data.Result.Token);
-        console.log(this.token);
+        // console.log(this.token);
       } else {
         alert(data.Message);
       }

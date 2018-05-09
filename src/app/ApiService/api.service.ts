@@ -8,7 +8,7 @@ import 'rxjs/add/operator/map';
 export class ApiService {
   // api位置
   baseUrl = '/Vote.api/api';
-
+  token = null;
   headers = new Headers();
 
   constructor(private http: Http) {
@@ -26,6 +26,7 @@ export class ApiService {
       .map((res: Response) => res.json())
       .catch(this.handleError)) as Observable<any>;
   }
+
   post<T>(url: string, body) {
     console.log('header', this.headers);
     return (<Observable<any>>this.http

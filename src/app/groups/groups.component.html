@@ -5,14 +5,22 @@
   
 </div>
 
-<div class="container color-light" [@groups]="groups.length" >
+<div class="container color-light" >
   <div class="col">
-    11
-  </div>
-  <div class="col">
-      <p class="life-container" *ngFor="let group of groups; let i = index;" (click)="removeItem(i)">
-        {{ i }}. {{group}}
+      <p class="life-container" *ngFor="let group of groups;">
+        <button (click)= "deleteGroup(group.Id)">x</button>
+          <a>{{ group.Id }}. {{group.Name}} {{group.Description}}</a>
         <!-- I want to climb a mountain. -->
       </p>
     </div>
+    <div class="col">
+        <p>Add new Group</p>
+        <form>
+          <input type="text" name="groupName" class="txt" placeholder="Name" required>
+          <input type="text" name="groupDescription" class="txt" placeholder="Description">
+
+          <input type="submit" class="btn" value = "ADD" (click)="addGroup(groupName,groupDescription)">
+                                       <!-- value = {{btnText}} -->
+        </form>
+      </div>
 </div>
