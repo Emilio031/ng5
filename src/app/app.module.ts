@@ -12,8 +12,6 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { GroupsComponent } from './groups/groups.component';
 import { ApiService } from './ApiService/api.service';
-import { LogoutComponent } from './logout/logout.component';
-
 
 @NgModule({
   declarations: [
@@ -22,7 +20,6 @@ import { LogoutComponent } from './logout/logout.component';
     AboutComponent,
     LoginComponent,
     GroupsComponent,
-    LogoutComponent
   ],
   imports: [
     BrowserModule,
