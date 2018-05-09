@@ -5,14 +5,14 @@
   
 </div>
 
-<div class="container color-light" [@goals]="goals.length" >
+<div class="container color-light" [@group]="groups.length" >
   <div class="col">
     11
   </div>
   <div class="col">
-    <p class="life-container" *ngFor="let goal of goals; let i = index;" (click)="removeItem(i)">
-      123
-      <!-- I want to climb a mountain. -->
-    </p>
-  </div>
+      <p class="life-container" *ngFor="let group of groups; let i = index;" (click)="removeItem(i)">
+        {{ i }}. {{group}}
+        <!-- I want to climb a mountain. -->
+      </p>
+    </div>
 </div>
