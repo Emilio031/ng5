@@ -21,6 +21,12 @@ const routes: Routes = [
     component: LoginComponent
 
   },
+  // {
+  //   path: 'logout',
+  //   // component:
+
+  // },
+
   {
     path: 'groups',
     component: GroupsComponent

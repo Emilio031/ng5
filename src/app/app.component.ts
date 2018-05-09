@@ -8,5 +8,6 @@ import {} from ''
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+  constructor(public apiService: ApiService) {}
   title = 'app';
 }

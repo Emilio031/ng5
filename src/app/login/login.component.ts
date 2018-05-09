@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
 
     this.apiService.post('/Identities/Login', body).subscribe((data: any) => {
       if (data.Success) {
+        this.apiService.setLoginStatus(true);
         this.router.navigate(['groups']);
         this.apiService.token = data.Result.Token;
         this.apiService.setToken(data.Result.Token);

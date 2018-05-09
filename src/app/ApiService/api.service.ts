@@ -10,6 +10,7 @@ export class ApiService {
   baseUrl = '/Vote.api/api';
   token = null;
   headers = new Headers();
+  loginStatus = false;
 
   constructor(private http: Http) {
     this.headers.append('Content-Type', 'application/json');
@@ -41,5 +42,9 @@ export class ApiService {
 
   handleError(res: Response) {
     return Observable.throw(res);
+  }
+
+  setLoginStatus(status: boolean) {
+    this.loginStatus = status;
   }
 }

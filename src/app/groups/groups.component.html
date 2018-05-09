@@ -16,10 +16,10 @@
     <div class="col">
         <p>Add new Group</p>
         <form>
-          <input type="text" name="groupName" class="txt" placeholder="Name" required>
-          <input type="text" name="groupDescription" class="txt" placeholder="Description">
+          <input #groupName id="" type="text" name="groupName" class="txt" placeholder="Name" required>
+          <input #groupDescription type="text" name="groupDescription" class="txt" placeholder="Description">
 
-          <input type="submit" class="btn" value = "ADD" (click)="addGroup(groupName,groupDescription)">
+          <input type="submit" class="btn" value = "ADD" (click)="addGroup(groupName.value, groupDescription.value)">
                                        <!-- value = {{btnText}} -->
         </form>
       </div>
