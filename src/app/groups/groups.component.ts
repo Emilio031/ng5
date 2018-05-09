@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../ApiService/api.service';
+import { trigger, style, transition, animate, keyframes, query, stagger } from '@angular/animations';
+
 
 @Component({
   selector: 'app-groups',
