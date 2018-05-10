@@ -24,7 +24,7 @@ const routes: Routes = [
     component: GroupsComponent
   },
   {
-    path: 'groups/votes/:id',
+    path: 'votes/:id',
     component: VotesComponent
   }
 ];

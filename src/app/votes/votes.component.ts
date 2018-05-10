@@ -18,6 +18,8 @@ export class VotesComponent implements OnInit {
   ngOnInit() {
     // this.getGroupTopics(id);
     this.activatedRoute.params.subscribe(params => {
+      console.log('params', params);
+
       this.id = +params['id'];
       console.log(this.id);
     });
