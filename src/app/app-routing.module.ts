@@ -4,22 +4,20 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { GroupsComponent } from './groups/groups.component';
+import { VotesComponent } from './votes/votes.component';
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent
-
   },
   {
     path: 'about/:id',
     component: AboutComponent
-
   },
   {
     path: 'login',
     component: LoginComponent
-
   },
   // {
   //   path: 'logout',
@@ -30,12 +28,15 @@ const routes: Routes = [
   {
     path: 'groups',
     component: GroupsComponent
-
   },
+  {
+    path: 'votes/:id',
+    component: VotesComponent
+  }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -2,14 +2,14 @@
   <div class="col">
     <p>Groups</p>
   </div>
-  
+
 </div>
 
 <div class="container color-light" >
   <div class="col">
       <p class="life-container" *ngFor="let group of groups;">
         <button (click)= "deleteGroup(group.Id)">x</button>
-          <a>{{ group.Id }}. {{group.Name}} {{group.Description}}</a>
+          <a routerLink="votes/{{group.Id}}">{{ group.Id }}. {{group.Name}} {{group.Description}}</a>
         <!-- I want to climb a mountain. -->
       </p>
     </div>
