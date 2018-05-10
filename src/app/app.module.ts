@@ -12,6 +12,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { GroupsComponent } from './groups/groups.component';
 import { ApiService } from './ApiService/api.service';
+import { VotesComponent } from './votes/votes.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ApiService } from './ApiService/api.service';
     AboutComponent,
     LoginComponent,
     GroupsComponent,
+    VotesComponent,
   ],
   imports: [
     BrowserModule,
