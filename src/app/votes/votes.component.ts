@@ -10,7 +10,9 @@ import { ApiService } from '../ApiService/api.service';
 export class VotesComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getGroupTopics(id);
+  }
 
   getGroupTopics(id) {
     this.apiService.get('Groups/GetGroupVoteTopics/id').subscribe((data: any) => {
