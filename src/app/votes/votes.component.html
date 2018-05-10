@@ -1,3 +1,17 @@
-<p>
-  votes works!
-</p>
+<div class="container color-dark">
+    <div class="col">
+      <p>VoteTopics{{group.Name}}</p>
+    </div>
+
+  </div>
+
+  <div class="container color-light" >
+    <div class="col">
+        名稱 簡介
+        <p class="life-container" *ngFor="let v of topics;">
+            <a routerLink="./votes/{{group.Id}}">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
+            {{v.ExpireDate }}
+        </p>
+      </div>
+
+  </div>

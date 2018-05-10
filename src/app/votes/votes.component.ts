@@ -9,6 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class VotesComponent implements OnInit {
   id: number;
+  group = [];
+  topics = [];
   constructor(
     private router: Router,
     private apiService: ApiService,
@@ -16,18 +18,37 @@ export class VotesComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    // this.getGroupTopics(id);
     this.activatedRoute.params.subscribe(params => {
-      console.log('params', params);
-
       this.id = +params['id'];
-      console.log(this.id);
+      this.getGroupTopics(this.id);
     });
   }
 
   getGroupTopics(id) {
-    this.apiService.get('Groups/GetGroupVoteTopics/id').subscribe((data: any) => {
-      console.log('getGroupTopics');
+    this.apiService.get('/Groups/GetGroupVoteTopics/' + this.id).subscribe((data: any) => {
+      console.log('getGroupTopics', data);
+      this.group.push({
+        Id: data.Id,
+        Name: data.Name,
+        Description: data.Description
+      });
+      for (const x of data.VoteTopics) {
+        this.topics.push({
+          Id: x.Id,
+          Name: x.Name,
+          Description: x.Description,
+          IsActive: x.IsActive,
+          GroupId: x.GroupId,
+          AllowItems: x.AllowItems,
+          CanAddItems: x.CanAddItems,
+          CreateMemberId: x.CreateMemberId,
+          CreatedDate: x.CreatedDate,
+          ExpireDate: x.ExpireDate,
+          VoteItems: x.VoteItems
+        });
+      }
+      console.log(this.group);
+      console.log(this.topics);
     });
   }
 }
