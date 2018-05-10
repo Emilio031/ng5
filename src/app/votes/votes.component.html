@@ -1,6 +1,6 @@
 <div class="container color-dark">
     <div class="col">
-      <p>VoteTopics{{group.Name}}</p>
+      <p>VoteTopics{{group[0].Name}}</p>
     </div>
 
   </div>
@@ -9,7 +9,7 @@
     <div class="col">
         名稱 簡介
         <p class="life-container" *ngFor="let v of topics;">
-            <a routerLink="./votes/{{group.Id}}">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
+            <a routerLink="./votes/{{v.Id}}">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
             {{v.ExpireDate }}
         </p>
       </div>

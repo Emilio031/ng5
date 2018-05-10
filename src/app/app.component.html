@@ -4,7 +4,7 @@
   <li><a routerLink="about/33">About</a></li>
   <li *ngIf="apiService.token == null"><a routerLink="login">Login</a></li>
   <li *ngIf="apiService.token !== null">HI</li>
-  <li *ngIf="apiService.token !== null"><button (click)="logout">Logout</button></li>
+  <li *ngIf="apiService.token !== null"><button (click)="logout()">Logout</button></li>
 
 
   <li><a routerLink="groups">Groups</a></li>

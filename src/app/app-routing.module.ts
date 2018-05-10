@@ -26,6 +26,10 @@ const routes: Routes = [
   {
     path: 'groups/votes/:id',
     component: VotesComponent
+  },
+  {
+    path: 'groups/votes/:id/votes/:voteId',
+    component: VotesComponent
   }
 ];
 
