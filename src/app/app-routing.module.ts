@@ -20,11 +20,6 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: 'logout',
-    component: LoginComponent
-  },
-
-  {
     path: 'groups',
     component: GroupsComponent
   },
