@@ -36,4 +36,11 @@ export class LoginComponent implements OnInit {
       }
     });
   }
+
+  logout() {
+    this.apiService.get('/Identities/Logout').subscribe((data: any) => {
+      console.log('logout');
+      this.router.navigate(['home']);
+    });
+  }
 }

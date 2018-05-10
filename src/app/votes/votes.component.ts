@@ -11,7 +11,7 @@ export class VotesComponent implements OnInit {
   constructor(private router: Router, private apiService: ApiService) {}
 
   ngOnInit() {
-    this.getGroupTopics(id);
+    // this.getGroupTopics(id);
   }
 
   getGroupTopics(id) {

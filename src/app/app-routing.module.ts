@@ -19,11 +19,10 @@ const routes: Routes = [
     path: 'login',
     component: LoginComponent
   },
-  // {
-  //   path: 'logout',
-  //   // component:
-
-  // },
+  {
+    path: 'logout',
+    component: LoginComponent
+  },
 
   {
     path: 'groups',
