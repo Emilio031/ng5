@@ -38,6 +38,7 @@ export class ApiService {
 
   setToken(token: string) {
     this.headers.append('Token', token);
+    console.log('token: ', this.token);
   }
 
   handleError(res: Response) {
@@ -46,5 +47,11 @@ export class ApiService {
 
   setLoginStatus(status: boolean) {
     this.loginStatus = status;
+    console.log('api: setLoginStatus- logout');
+    status = false;
+    if (status === false) {
+      this.token = '';
+    }
+    console.log('token: ', this.token);
   }
 }
