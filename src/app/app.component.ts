@@ -15,7 +15,7 @@ export class AppComponent {
     this.apiService.get('/Identities/Logout').subscribe((data: any) => {
       this.apiService.setLoginStatus(false);
       console.log('logout');
-      this.router.navigate(['home']);
+      this.router.navigate(['./home']);
     });
   }
 }

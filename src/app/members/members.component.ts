@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../ApiService/api.service';
-// import { TableModule } from 'primeng/table';
 
 @Component({
   selector: 'app-members',

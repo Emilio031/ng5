@@ -15,6 +15,8 @@ import { ApiService } from './ApiService/api.service';
 import { VotesComponent } from './votes/votes.component';
 import { MembersComponent } from './members/members.component';
 
+import { DataTableModule } from 'primeng/primeng';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,18 +25,17 @@ import { MembersComponent } from './members/members.component';
     LoginComponent,
     GroupsComponent,
     VotesComponent,
-    MembersComponent,
+    MembersComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    // primeng
+    DataTableModule
   ],
-  providers: [
-      DataService,
-      ApiService
-  ],
+  providers: [DataService, ApiService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
