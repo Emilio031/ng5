@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from '../ApiService/api.service';
 import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-votes',
   templateUrl: './votes.component.html',
@@ -12,6 +13,7 @@ export class VotesComponent implements OnInit {
   group = [];
   topics = [];
   topicResult = [];
+
   constructor(
     private router: Router,
     private apiService: ApiService,
