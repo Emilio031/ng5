@@ -11,6 +11,7 @@ export class VotesComponent implements OnInit {
   id: number;
   group = [];
   topics = [];
+  topicResult = [];
   constructor(
     private router: Router,
     private apiService: ApiService,
@@ -50,5 +51,9 @@ export class VotesComponent implements OnInit {
       console.log(this.group);
       console.log(this.topics);
     });
+  }
+
+  getTopicResult(id) {
+    this.apiService.get('/Groups/GetVoteResultDetail/' + this.id).subscribe((data: any) => {});
   }
 }
