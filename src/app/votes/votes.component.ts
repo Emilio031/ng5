@@ -13,6 +13,7 @@ export class VotesComponent implements OnInit {
   group = [];
   topics = [];
   topicResult = [];
+  currentTopic = <any>{};
 
   constructor(
     private router: Router,
@@ -56,6 +57,8 @@ export class VotesComponent implements OnInit {
   }
 
   getTopicResult(id) {
-    this.apiService.get('/Groups/GetVoteResultDetail/' + this.id).subscribe((data: any) => {});
+    this.apiService.get('/Groups/GetVoteResultDetail/' + this.id).subscribe((data: any) => {
+      this.currentTopic = data;
+    });
   }
 }

@@ -33,7 +33,7 @@ const routes: Routes = [
     component: VotesComponent
   },
   {
-    path: 'groups/votes/:id/votes/:voteId',
+    path: 'groups/votes/:id/:voteId',
     component: VotesComponent
   }
 ];

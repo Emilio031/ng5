@@ -9,7 +9,7 @@
   <div class="col">
     名稱 簡介
     <p class="life-container" *ngFor="let v of topics;">
-      <a routerLink="./votes/{{v.Id}}">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
+      <a (click)="getTopicResult(v.Id)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
       {{v.ExpireDate }}
     </p>
   </div>
