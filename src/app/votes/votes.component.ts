@@ -55,7 +55,7 @@ export class VotesComponent implements OnInit {
     });
   }
 
-  getTopicResult(id) {
+  getGetVoteResultDetail(id) {
     this.apiService.get('/Groups/GetVoteResultDetail/' + this.id).subscribe((data: any) => {});
   }
 }

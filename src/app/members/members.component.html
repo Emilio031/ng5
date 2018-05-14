@@ -7,7 +7,7 @@
 
 <div class="container color-light">
   <div class="col">
-    <table>
+    <!-- <table>
       <tr>
         <th>Id</th>
         <th>Name</th>
@@ -25,11 +25,20 @@
         <th>{{member.Gender}}</th>
         <th>{{member.Birthday}}</th>
         <th>{{member.Email}}</th>
-        <th>{{member.Token}}</th>
+        <th *ngIf="member.Token === null">null</th>
+        <th *ngIf="member.Token !== null">{{member.Token}}</th>
         <th>{{member.IsAdmin}}</th>
         <th>{{member.CreatedDate}}</th>
         <th>{{member.ModifyDate}}</th>
       </tr>
-    </table>
+    </table> -->
+    <p-dataTable [value]="members">
+      <p-column field="Id" header="Vin"></p-column>
+      <p-column field="Name" header="Year"></p-column>
+      <p-column field="Gender" header="Brand"></p-column>
+      <p-column field="Birthday" header="Color"></p-column>
+      <p-column field="Email" header="Color"></p-column>
+    </p-dataTable>
   </div>
 </div>
+
