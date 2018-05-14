@@ -5,6 +5,7 @@ import { AboutComponent } from './about/about.component';
 import { LoginComponent } from './login/login.component';
 import { GroupsComponent } from './groups/groups.component';
 import { VotesComponent } from './votes/votes.component';
+import { MembersComponent } from './members/members.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'groups',
     component: GroupsComponent
+  },
+  {
+    path: 'members',
+    component: MembersComponent
   },
   {
     path: 'groups/votes/:id',
