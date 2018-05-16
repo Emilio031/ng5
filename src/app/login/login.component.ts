@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['groups']);
         this.apiService.token = data.Result.Token;
         this.apiService.setToken(data.Result.Token);
-        // console.log(this.token);
+        console.log(this.apiService.token);
       } else {
         alert(data.Message);
       }

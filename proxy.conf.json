@@ -1,7 +1,7 @@
 {
   "/Vote.api/api": {
     "target": {
-      "host": "10.11.24.95",
+      "host": "211.76.157.47",
       "protocol": "http",
       "port": 80
     },
