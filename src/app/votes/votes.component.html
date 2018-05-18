@@ -9,13 +9,13 @@
   <div class="col">
     <h3>名稱 簡介</h3>
     <p class="life-container" *ngFor="let v of group.VoteTopics;">
-      <a (click)="getTopicResultDetail(v.Id);update($event)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
+      <a (click)="getTopicResultDetail(v.Id,$event)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
       {{v.ExpireDate }}
     </p>
   </div>
 
   <div class="col">
-    <h3>結果: {{topic.Name}}</h3>
+    <h3>結果: {{topic.Name}} {{topic.Id}}</h3>
     <p-chart type="pie" [data]="piedata"></p-chart>
 
   </div>

@@ -50,9 +50,9 @@ export class VotesComponent implements OnInit {
     });
   }
 
-  getTopicResultDetail(id) {
-    // this.items = [];
-    // this.count = [];
+  getTopicResultDetail(id, event: Event) {
+    this.items = [];
+    this.count = [];
     this.apiService.get('/Votes/GetVoteResultDetail/' + id).subscribe((data: any) => {
       this.topic = data;
       for (const x of data.VoteItems) {
@@ -61,6 +61,7 @@ export class VotesComponent implements OnInit {
       }
       console.log(this.items);
       console.log(this.count);
+      this.update(event);
     });
   }
 
@@ -70,8 +71,24 @@ export class VotesComponent implements OnInit {
       datasets: [
         {
           data: this.count,
-          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-          hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
+          backgroundColor: [
+            '#DF749B',
+            '#AA3DF4',
+            '#83F6FD',
+            '#A0F680',
+            '#E37666',
+            '#FEF55D',
+            '#C37836'
+          ],
+          hoverBackgroundColor: [
+            '#DF749B',
+            '#AA3DF4',
+            '#83F6FD',
+            '#A0F680',
+            '#E37666',
+            '#FEF55D',
+            '#C37836'
+          ]
         }
       ]
     };
