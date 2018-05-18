@@ -29,7 +29,11 @@ const routes: Routes = [
     component: MembersComponent
   },
   {
-    path: 'groups/votes/:id',
+    path: 'groups/votes/:groupId',
+    component: VotesComponent
+  },
+  {
+    path: 'groups/votes/:topicId',
     component: VotesComponent
   }
 ];

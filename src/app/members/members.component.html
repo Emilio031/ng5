@@ -2,36 +2,10 @@
   <div class="col">
     <p>Members</p>
   </div>
-
 </div>
 
-<div class="container color-light">
+<div *ngIf="apiService.loginStatus === true" class="container color-light">
   <div class="col">
-    <!-- <table>
-      <tr>
-        <th>Id</th>
-        <th>Name</th>
-        <th>Gender</th>
-        <th>Birthday</th>
-        <th>Email</th>
-        <th>Token</th>
-        <th>IsAdmin</th>
-        <th>CreatedDate</th>
-        <th>ModifyDate</th>
-      </tr>
-      <tr *ngFor="let member of members">
-        <td>{{member.Id}}</td>
-        <th>{{member.Name}}</th>
-        <th>{{member.Gender}}</th>
-        <th>{{member.Birthday}}</th>
-        <th>{{member.Email}}</th>
-        <th *ngIf="member.Token === null">null</th>
-        <th *ngIf="member.Token !== null">{{member.Token}}</th>
-        <th>{{member.IsAdmin}}</th>
-        <th>{{member.CreatedDate}}</th>
-        <th>{{member.ModifyDate}}</th>
-      </tr>
-    </table> -->
     <p-dataTable [value]="members">
       <p-column field="Id" header="id"></p-column>
       <p-column field="Name" header="姓名"></p-column>
@@ -43,3 +17,6 @@
   </div>
 </div>
 
+<div *ngIf="apiService.loginStatus === false">
+  沒有登入喔
+</div>

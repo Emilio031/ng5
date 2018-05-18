@@ -1,17 +1,23 @@
 <div class="container color-dark">
   <div class="col">
-    <p>VoteTopics{{group[0].Name}}</p>
+    <p>VoteTopics{{group.Name}}</p>
   </div>
 
 </div>
 
 <div class="container color-light">
   <div class="col">
-    名稱 簡介
-    <p class="life-container" *ngFor="let v of topics;">
-      <a (click)="getTopicResult(v.Id)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
+    <h3>名稱 簡介</h3>
+    <p class="life-container" *ngFor="let v of group.VoteTopics;">
+      <a (click)="getTopicResultDetail(v.Id);update($event)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
       {{v.ExpireDate }}
     </p>
+  </div>
+
+  <div class="col">
+    <h3>結果: {{topic.Name}}</h3>
+    <p-chart type="pie" [data]="piedata"></p-chart>
+
   </div>
 
 </div>

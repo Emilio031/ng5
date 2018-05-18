@@ -8,7 +8,7 @@ import { Member } from '../../typings';
   styleUrls: ['./members.component.scss']
 })
 export class MembersComponent implements OnInit {
-  constructor(private apiService: ApiService) {}
+  constructor(public apiService: ApiService) {}
   members: Member[];
 
   ngOnInit() {

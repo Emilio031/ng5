@@ -14,7 +14,8 @@ import { GroupsComponent } from './groups/groups.component';
 import { ApiService } from './ApiService/api.service';
 import { VotesComponent } from './votes/votes.component';
 import { MembersComponent } from './members/members.component';
-
+// primeng
+import { ChartModule } from 'primeng/chart';
 import { DataTableModule } from 'primeng/primeng';
 
 @NgModule({
@@ -33,7 +34,8 @@ import { DataTableModule } from 'primeng/primeng';
     FormsModule,
     HttpModule,
     // primeng
-    DataTableModule
+    DataTableModule,
+    ChartModule
   ],
   providers: [DataService, ApiService],
   bootstrap: [AppComponent]
