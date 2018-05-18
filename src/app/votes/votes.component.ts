@@ -72,21 +72,21 @@ export class VotesComponent implements OnInit {
         {
           data: this.count,
           backgroundColor: [
-            '#DF749B',
-            '#AA3DF4',
-            '#83F6FD',
-            '#A0F680',
-            '#E37666',
-            '#FEF55D',
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#96C356',
+            '#7657BF',
+            '#ED622D',
             '#C37836'
           ],
           hoverBackgroundColor: [
-            '#DF749B',
-            '#AA3DF4',
-            '#83F6FD',
-            '#A0F680',
-            '#E37666',
-            '#FEF55D',
+            '#FF6384',
+            '#36A2EB',
+            '#FFCE56',
+            '#96C356',
+            '#7657BF',
+            '#ED622D',
             '#C37836'
           ]
         }
