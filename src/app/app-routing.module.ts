@@ -6,6 +6,7 @@ import { LoginComponent } from './login/login.component';
 import { GroupsComponent } from './groups/groups.component';
 import { VotesComponent } from './votes/votes.component';
 import { MembersComponent } from './members/members.component';
+import { VoteDetailComponent } from './vote-detail/vote-detail.component';
 
 const routes: Routes = [
   {
@@ -29,12 +30,12 @@ const routes: Routes = [
     component: MembersComponent
   },
   {
-    path: 'groups/votes/:groupId',
+    path: 'groups/:groupId',
     component: VotesComponent
   },
   {
-    path: 'groups/votes/:topicId',
-    component: VotesComponent
+    path: 'votes/:topicId',
+    component: VoteDetailComponent
   }
 ];
 

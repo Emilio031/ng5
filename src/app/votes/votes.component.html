@@ -11,7 +11,7 @@
     <p class="life-container" *ngFor="let v of group.VoteTopics;">
       <a (click)="getTopicResultDetail(v.Id,$event)">{{ v.Id }}. {{v.Name}} {{v.Description}}</a>
       {{v.ExpireDate }}
-      <button >detail</button>
+      <a routerLink="../../votes/{{v.Id}}">detail</a>
 
     </p>
   </div>

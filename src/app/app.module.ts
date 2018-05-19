@@ -17,6 +17,7 @@ import { MembersComponent } from './members/members.component';
 // primeng
 import { ChartModule } from 'primeng/chart';
 import { DataTableModule } from 'primeng/primeng';
+import { VoteDetailComponent } from './vote-detail/vote-detail.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { DataTableModule } from 'primeng/primeng';
     LoginComponent,
     GroupsComponent,
     VotesComponent,
-    MembersComponent
+    MembersComponent,
+    VoteDetailComponent
   ],
   imports: [
     BrowserModule,
